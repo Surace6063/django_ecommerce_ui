@@ -1,0 +1,38 @@
+
+<div class="max-w-6xl mx-auto py-16 flex flex-col md:flex-row gap-8">
+
+  <!-- Product Summary -->
+  <div class="flex-1 border border-slate-200 rounded-lg p-6 shadow-sm h-fit">
+    <h2 class="text-xl font-bold mb-4">Your Order</h2>
+    
+    <div class="flex items-center space-x-4 mb-4">
+      <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-24 h-24 object-cover rounded">
+      <div>
+        <h3 class="text-lg font-semibold text-slate-800 mb-2">{{ product.product_name }}</h3>
+        <p class="text-slate-500">Price: ${{ product.product_price }}</p>
+        <p class="text-slate-500">Quantity: {{ cart_item.quantity }}</p>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="flex justify-between text-lg font-bold">
+      <span>Total Price:</span>
+      <span>${{ total_price }}</span>
+    </div>
+  </div>
+
+  <!-- Shipping / Payment Form -->
+  <div class="border border-slate-300 p-6 rounded-lg shadow-sm flex-2">
+    <h2 class="text-xl font-bold mb-6">Shipping & Payment</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit" class="mt-4 w-full bg-slate-800 hover:bg-slate-700 text-white py-2 rounded-md">
+        Place Order
+      </button>
+    </form>
+  </div>
+
+</div>
+

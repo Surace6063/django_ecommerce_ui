@@ -1,42 +1,81 @@
 <div class="max-w-7xl mx-auto px-4 py-16 pt-24">
-  <h1 class="text-3xl font-bold text-slate-800 mb-8">Shopping Cart</h1>
+  <h1 class="text-3xl font-bold text-slate-600 mb-8">Shopping Cart</h1>
 
-  <!-- Cart Items -->
-  <div class="space-y-6 max-w-4xl">
-    <!-- Single Cart Item -->
-    <div class="flex items-center gap-6 border border-slate-200 rounded-lg p-5 shadow-sm hover:shadow-md transition relative bg-white">
-      <!-- Product Image -->
-      <img
-        src="https://via.placeholder.com/150"
-        alt="Product Name"
-        class="w-28 h-28 rounded-lg object-cover"
-      />
+  <div class="flex flex-col lg:flex-row gap-8">
 
-      <!-- Product Info -->
-      <div class="flex-1">
-        <h2 class="text-lg font-semibold text-slate-800">Product Name</h2>
-        <p class="text-slate-500 mt-1">$45.00</p>
-        <p class="text-sm text-slate-600 mt-1">Quantity: 2</p>
+    <!-- Cart Items (Left) -->
+    <div class="flex-2 space-y-6">
+
+      <!-- Item 1 -->
+      <div class="flex items-center gap-6 border border-slate-200 rounded-lg p-5 shadow-sm hover:shadow-md transition relative bg-white">
+        <img src="https://via.placeholder.com/120" alt="Product 1" class="w-28 h-28 rounded-lg object-cover" />
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-slate-800">Running Shoes</h2>
+          <div class="flex justify-between items-center">
+            <div>
+              <p class="text-slate-500 mt-1">$60.00</p>
+              <p class="text-sm text-slate-500"><span class="mr-1">Quantity:</span>2</p>
+            </div>
+            <p class="text-slate-600"><span class="font-semibold text-slate-800">Total:</span> $120.00</p>
+          </div>
+        </div>
+        <a href="#" class="absolute top-2 right-2 cursor-pointer hover:text-red-500">
+          ✕
+        </a>
       </div>
 
-      <!-- Actions -->
-      <div class="flex flex-col items-end justify-between h-full">
-        <!-- Remove Button -->
-        <button class="text-slate-400 hover:text-red-500 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-          </svg>
-        </button>
+      <!-- Item 2 -->
+      <div class="flex items-center gap-6 border border-slate-200 rounded-lg p-5 shadow-sm hover:shadow-md transition relative bg-white">
+        <img src="https://via.placeholder.com/120" alt="Product 2" class="w-28 h-28 rounded-lg object-cover" />
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-slate-800">Casual T-Shirt</h2>
+          <div class="flex justify-between items-center">
+            <div>
+              <p class="text-slate-500 mt-1">$25.00</p>
+              <p class="text-sm text-slate-500"><span class="mr-1">Quantity:</span>1</p>
+            </div>
+            <p class="text-slate-600"><span class="font-semibold text-slate-800">Total:</span> $25.00</p>
+          </div>
+        </div>
+        <a href="#" class="absolute top-2 right-2 cursor-pointer hover:text-red-500">
+          ✕
+        </a>
+      </div>
 
-        <!-- Order Now -->
+    </div>
+
+    <!-- Order Summary (Right) -->
+    <div class="flex-1">
+      <div class="p-6 border border-slate-200 rounded-lg bg-white shadow-sm hover:shadow-md transition">
+        <h2 class="text-xl font-semibold text-slate-800 mb-4">Order Summary</h2>
+
+        <!-- Subtotal -->
+        <div class="flex justify-between mb-2">
+          <span class="text-slate-600">Subtotal</span>
+          <span class="text-slate-800 font-medium">$145.00</span>
+        </div>
+
+        <!-- Shipping -->
+        <div class="flex justify-between mb-2">
+          <span class="text-slate-600">Shipping</span>
+          <span class="text-slate-800 font-medium">$0</span>
+        </div>
+
+        <hr class="my-2 border-slate-300">
+
+        <!-- Total -->
+        <div class="flex justify-between mb-4">
+          <span class="text-slate-800 font-semibold text-lg">Total</span>
+          <span class="text-slate-800 font-semibold text-lg">$145.00</span>
+        </div>
+
+        <!-- Proceed Button -->
         <a href="#"
-          class="text-sm font-medium text-sky-600 hover:text-sky-700 transition">
-          Order Now
+           class="w-full bg-slate-800 text-white px-4 py-3 rounded-md hover:bg-slate-600 transition cursor-pointer block text-center">
+          Proceed to Order
         </a>
       </div>
     </div>
-  </div>
 
-  <!-- Empty Cart State -->
-  <!-- <p class="text-slate-500">Your cart is empty.</p> -->
+  </div>
 </div>
